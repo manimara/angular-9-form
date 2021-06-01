@@ -29,9 +29,6 @@ export class AppComponent implements OnInit {
     return this.c.subjects as FormArray;
   }
 
-  get subjectControls() {
-    return this.subjects.controls;
-  }
   constructor(private formBuilder: FormBuilder) {}
   ngOnInit() {
     this.formGroup = new FormGroup({

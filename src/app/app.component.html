@@ -7,11 +7,15 @@
 
   <div *ngFor="let sub of subjects.controls, let i = index">
     <!-- <p>{{sub|json}}</p> -->
-    <!-- <ng-container formArrayName="sub"> -->
-    <!-- <ng-container [formGroup]="sub"> -->
     <ng-container formGroupName="{{sub}}">
+      <!-- <ng-container formArrayName="sub"> -->
+      <!-- <ng-container [formGroup]="sub"> -->
+      <!-- <ng-container formGroupName="{{sub}}"> -->
       <!-- <div [formGroup]="sub"> -->
-      <span *ngFor="let ctrl of sub.controls">
+      {{i}}
+      <!-- <p>{{JSON.parse(sub[0])|json}}</p> -->
+
+      <span *ngFor="let ctrl of array.controls">
         <label for="ctrl.name">{{ctrl.name}}</label>
         <input type="text" formControlName="ctrl.name" >
       </span>
